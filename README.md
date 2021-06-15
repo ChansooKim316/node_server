@@ -12,6 +12,15 @@
 3. ```npm install```
 4. ```npm install pm2```
 5. ```pm2-dev index.js```
+
+### How to test out
+1. Local files (image, text)
+  ```host1.localhost/files/wine.png ```
+  ```host1.localhost/files/text.txt ```
+2. Caching 
+- Postman
+- Browser
+
 ### How it works
 
 #### 1. Initiates clusters
