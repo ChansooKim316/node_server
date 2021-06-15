@@ -1,23 +1,29 @@
 
-# Net 모듈을 이용한 서버 구축  
-#
----  
-#  
-### 작동순서  
-#
-#### 1. 클러스터들 시작 (index.js 가 마스터 역할)
-#### 2. 리퀘스트로 부터 헤더들 저장
-#### 3. 리퀘스트를 분배 (헤더 첫줄 ~ '\r\n\r\n' 까지 합쳐 리턴)
-#### 4. 가상호스트, 메소드 분기
-#### 5. 리스폰스를 텍스트로 만들어 변수에 할당 
-- 리다이렉션 
-- 쿼리스트링 또는 바디의 데이터들을 처리
-- 파일요청
-- 캐시컨트롤
+# Simple Web Server  
 
-#### 6. 리스폰스 보내기
+### Language
+- Node.js
+### Library
+- Net Module
+- PM2 (for clustering)
+### How to start
+1. clone this repository
+2. ```cd node_server```
+3. ```npm install```
+4. ```npm install pm2```
+5. ```pm2-dev index.js```
+### How it works
+
+#### 1. Initiates clusters
+#### 2. When it gets request, it stores request headers and bodies
+#### 3. Generates responses for different types of requests, such as:
+- Re-direction
+- Query strings
+- Local file requests
+- Cache control
+
+#### 4. Send response to the client
 
 #
-### 작동방식  
-# 
+### Diagram
 ![다이어그램](./diagram.png)
