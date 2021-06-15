@@ -47,7 +47,7 @@ const initializeServer = () => {
 
 const onConnected = (socket) => {
 	socket.on('data', req => {
-		console.log('req : \n', req)
+		// console.log('request : \n', req.toString())
 		let slicedRequest = reqDistributor(req)
 		if (slicedRequest) {
 			// console.log('req :\n', slicedRequest.toString())
@@ -90,7 +90,7 @@ const route = (request, fileInfo) => {
 		const host = headers['host'].split('.')[0];
 		const method = headers['method'];
 		switch (host) {
-			case 'vhost':
+			case 'host1':
 				if (method === 'get') {
 					return vhost.get(fileInfo);
 				}
@@ -98,7 +98,7 @@ const route = (request, fileInfo) => {
 					return vhost.post(request, fileInfo);
 				}
 				else return `<h1>Invalid method : ${method} .</h1>`;
-			case 'm2':
+			case 'host2':
 				if (method === 'get') {
 					return m2.get(fileInfo);
 				}
@@ -107,7 +107,7 @@ const route = (request, fileInfo) => {
 				}
 				else return `<h1>Invalid method : ${method} .</h1>`;
 			default:
-				return `<h1>Invalid hostname : ${host} .</h1>`;
+				return `<h1>Invalid hostname : ${host} . Please type the host 'host1' or 'host2'</h1>`;
 		};
     } catch (err) {
         console.error(err)

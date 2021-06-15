@@ -43,6 +43,6 @@ module.exports = (path, fileInfo) => {
         }
     } catch (err) {
         console.error(err)
-        return resp.notFoundResp;
+        return resp.noFile;
     }
 };

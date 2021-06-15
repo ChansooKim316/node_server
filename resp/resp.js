@@ -23,6 +23,15 @@ module.exports = {
         '<h1>404 Not Found</h1>',
         ''
     ].join('\r\n'),
+    noFile: [
+        `HTTP/1.1 404 Not Found`,
+        `Date: ${new Date()}`,
+        `Content-Length: ${get.byteSize("<h1>Couldn't get the file</h1>")}`,
+        `Connection: close`,
+        '',
+        "<h1>Couldn't get the file</h1>",
+        ''
+    ].join('\r\n'),
     notModified: (path, fileInfo) => {
         try {
             return [
