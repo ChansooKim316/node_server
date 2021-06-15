@@ -14,7 +14,7 @@
 5. ```pm2-dev index.js```
 
 ### How to test out
-1. Get files from the server (image, text)  
+1. Get files from the server (example text file)  
     - type ```host1.localhost/files/localfile.txt ``` on a browsesr
     
 2. Caching 
