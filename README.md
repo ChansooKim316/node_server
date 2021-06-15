@@ -21,8 +21,9 @@
 - Query strings
 - Local file requests
 - Cache control
-
-#### 4. Send response to the client
+ 
+#### 4. When client requires cache control, it broadcasts the file information to all clusters (with PM2)
+#### 5. Send response to the client
 
 #
 ### Diagram
