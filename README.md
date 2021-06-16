@@ -7,7 +7,7 @@
 - Net Module
 - PM2 (for clustering)
 ### How to start
-1. clone this repository
+1. Clone this repository
 2. ```cd node_server```
 3. ```npm install```
 4. ```npm install pm2```
@@ -15,17 +15,23 @@
 
 ### How to test out
 1. Get files from the server (example text file)  
-    - type ```host1.localhost/files/localfile.txt ``` on a browsesr
+    - Type ```host1.localhost/files/localfile.txt ``` on a browsesr
+
+2. Redirection  
+
+    1. Open a browser, and the inspector  
+    2. Type ```host1.localhost/redir ```  
+    3. The server will give you 302 response and 200 response with a landing page 
     
 2. Caching 
-    1. open a new window and a secret window (with inspector opened)
-    2. type ```host1.localhost/files/image1.png ``` in a new window  
-    3. type ```host1.localhost/files/image2.png ``` in a secret window  
-    4. repeat step ii and step iii one more time.
-    5. you can see 304 responses on two windows
+    1. Open a new window and a secret window (with inspector opened)
+    2. Type ```host1.localhost/files/image1.png ``` in a new window  
+    3. Type ```host1.localhost/files/image2.png ``` in a secret window  
+    4. Repeat step ii and step iii one more time.
+    5. You'll see 304 responses on two windows
 
 3. Virtual Hosting  
-    - write ``` host2 ``` instead of ``` host1 ``` in all steps above  
+    - Type ``` host2 ``` instead of ``` host1 ``` in all the steps above  
   
 ### How it works
 
