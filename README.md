@@ -20,15 +20,15 @@
 
 2. Redirection  
 
-    1. Open a browser, and the inspector  
+    1. Open a browser, and the developer tool  
     2. Type ```host1.localhost/redir ```  
     3. The server will give you 301, 302, and 200 response with a landing page 
     
 2. Caching 
-    1. Open a new window and a secret window (with the inspectors opened)
+    1. Open a 'new window' and a 'secret window' (with developer tools opened)
     2. Type ```host1.localhost/files/image1.png ``` in a new window  
     3. Type ```host1.localhost/files/image2.png ``` in a secret window  
-    4. Repeat step ii and step iii one more time.
+    4. Repeat "ii" and step "iii" one more time.
     5. You'll see 304 responses on those two windows
 
 3. Virtual Hosting  
