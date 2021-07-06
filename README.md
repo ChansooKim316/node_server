@@ -28,7 +28,7 @@
     1. Open a 'new window' and a 'secret window' (with developer tools opened)
     2. Type ```host1.localhost/files/image1.png ``` in a new window  
     3. Type ```host1.localhost/files/image2.png ``` in a secret window  
-    4. Repeat "ii" and step "iii" one more time.
+    4. Repeat "ii" and "iii" one more time.
     5. You'll see 304 responses on those two windows
 
 3. Virtual Hosting  
