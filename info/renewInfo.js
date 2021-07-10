@@ -17,16 +17,18 @@ const fs = require('fs');;
 
 module.exports = (path, fileInfo) => {
     try {
-        const maxAge = 60000;   // 60초
-        const now = new Date();
-        const stats = fs.statSync(path);
-        const lastModified = stats.ctime;  // when file's metadata was changed
-        fileInfo.eTag[path] = createHash(32);
-        fileInfo.expires[path] = new Date(now.getTime() + maxAge);
-        fileInfo.cacheControl[path] = `public, max-age=${maxAge / 1000}`;
-        fileInfo.contentType[path] = mime.lookup(path);
-        fileInfo.lastModified[path] = lastModified;
-        return fileInfo;
+        if(path !== 'favicon.ico') {
+            const maxAge = 60000;   // 60초
+            const now = new Date();
+            const stats = fs.statSync(path);
+            const lastModified = stats.ctime;  // when file's metadata was changed
+            fileInfo.eTag[path] = createHash(32);
+            fileInfo.expires[path] = new Date(now.getTime() + maxAge);
+            fileInfo.cacheControl[path] = `public, max-age=${maxAge / 1000}`;
+            fileInfo.contentType[path] = mime.lookup(path);
+            fileInfo.lastModified[path] = lastModified;
+            return fileInfo;
+        }
     } catch (error) {
         console.error(error);
     }

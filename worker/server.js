@@ -107,7 +107,7 @@ const route = (request, fileInfo) => {
 				}
 				else return `<h1>Invalid method : ${method} .</h1>`;
 			default:
-				return `<h1>Invalid hostname : ${host} . Please type the host 'host1' or 'host2'</h1>`;
+				return `<h1>Invalid hostname : ${host} . Please type 'host1' or 'host2' for host name</h1>`;
 		};
     } catch (err) {
         console.error(err)
