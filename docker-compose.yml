@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  node-server:
+    container_name: server
+    build: ./
+    command: pm2-dev index.js
+    working_dir: /usr/src/node-server
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/usr/src/node-server
