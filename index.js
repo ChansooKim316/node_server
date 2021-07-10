@@ -30,8 +30,8 @@ const startClusters = (socket) => {
                 "script": "./worker/server.js",
                 "name": "worker",
                 "exec_mode": "cluster",
-                // "instances": -1
-                "instances": 4
+                "instances": -1
+//                 "instances": 4
             }, (err, apps) => {
                 // console.log(apps);
                 if (err) throw err;
