@@ -15,8 +15,8 @@
 
 ### How to test out
 1. Download sample files from the server (text file)  
-    1. Type ```host1.localhost/files/localfile.txt ``` on a browsesr
-    2. The server'll give you the sample file
+    1. Go to ```host1.localhost/files/localfile.txt ``` on a browsesr
+    2. The server will give you the sample file
 
 2. Redirection  
     1. Open a browser, with the developer tool  
